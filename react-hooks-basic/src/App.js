@@ -19,11 +19,11 @@ function App() {
       try {
         const requestUrl =
           "http://js-post-api.herokuapp.com/api/posts?_limit=10&_page=1";
-        const reponse = await fetch(requestUrl);
-        const reponseJSON = await reponse.json();
-        console.log({ reponseJSON });
+        const response = await fetch(requestUrl);
+        const responseJSON = await response.json();
+        console.log({ responseJSON });
 
-        const { data } = reponseJSON;
+        const { data } = responseJSON;
         setPostList(data);
       } catch (error) {
         console.log("Failed to fetch post list: ", error.message);
