@@ -5,13 +5,13 @@ const TodoForm = (props) => {
   const { onSubmit } = props;
   const [value, setValue] = useState("");
 
-  function handlevalueChange(e) {
+  function handleValueChange(e) {
     console.log(e.target.value);
     setValue(e.target.value);
   }
 
   function handleSubmit(e) {
-    // Prevent reloading brower
+    // Prevent reloading browser
     e.preventDefault();
     if (!onSubmit) return;
 
@@ -25,7 +25,7 @@ const TodoForm = (props) => {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={value} onChange={handlevalueChange} />
+      <input type="text" value={value} onChange={handleValueChange} />
     </form>
   );
 };
