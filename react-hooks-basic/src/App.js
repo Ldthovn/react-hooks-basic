@@ -9,6 +9,7 @@ import Pagination from "./components/Pagination";
 import PostFiltersForm from "./components/PostFiltersForm";
 import CLock from "./components/Clock";
 import BetterCLock from "./components/BetterClock";
+import MagicBox from "./components/MagicBox";
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -99,10 +100,12 @@ function App() {
     <div className="App">
       <p>React hooks - PostList</p>
 
-      <BetterCLock />
+      <MagicBox />
+
+      {/* <BetterCLock />
 
       {showClock && <CLock />}
-      <button onClick={() => setShowClock(false)}>Hide clock</button>
+      <button onClick={() => setShowClock(false)}>Hide clock</button> */}
 
       {/* <PostList posts={postList} />
       <Pagination pagination={pagination} onPageChange={handlePageChange} />
